@@ -14,11 +14,61 @@
     <h1>The Stories of the Land</h1>
     <hr/>
     <h2>The Secomber Seconds</h2>
-    <a href="./Pages of Local Sources/Secomber Seconds.html">Open</a>
+    <form>
+        <label for="SecPswd">Monthly fee paid: </label>
+        <input type="password" id="SecPswd">
+        <input type="button" value="Submit" onclick="checkSecPswd();" />
+    </form>
+
+    <script type="text/javascript">
+        function checkSecPswd() {
+            var confirmPassword = "gold";
+            var password = document.getElementById("SecPswd").value;
+            if (password == confirmPassword) {
+                 window.location="./Pages of Local Sources/Secomber Seconds.html";
+            }
+            else{
+                alert("Passwords do not match.");
+            }
+        }
+        </Script>
+
     <h2>Whispers from the Moor</h2>
     <a href="./Pages of Local Sources/Tales from the Moor.html">Open</a>
+
     <h2>Misty Channel</h2>
+    <form>
+        <label for="ForestPswd">Your informant is: </label>
+        <input type="password" id="ForestPswd">
+        <input type="button" value="Submit" onclick="checkForestPswd();" />
+    </form>
+   
+    <script type="text/javascript">
+        function checkForestPswd() {
+            var confirmPassword = "Pixie";
+            var password = document.getElementById("ForestPswd").value;
+            if (password == confirmPassword) {
+                 window.location="./Pages of Local Sources/Forest Channel.html";
+            }
+            else{
+                alert("Passwords do not match.");
+            }
+        }
+        </Script>
     <a href="./Pages of Local Sources/Forest Channel.html">Open</a>
+
+
+
+    <hr/>
+    
     
 </body>
 </html>
+
+
+
+
+
+
+
+
