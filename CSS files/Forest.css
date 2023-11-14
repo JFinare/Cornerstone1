@@ -1,6 +1,31 @@
-html{background-color: #F1EAFF; font-family: 'Agbalumo', cursive;;}
+html{background-color: #D0E7D2; font-family: 'Agbalumo', cursive;}
 h1{color: #224B0C;}
 h2{color: #860A35;}
 li{color: #AF2655;}
 p{color: #1A5D1A; font-size: 16pt;font-weight: lighter;}
-a{color: #898121;}
+a{color: darkgoldenrod;}
+header{background-color: #B5CB99; 
+    padding: 20px 0; color: #B2533E; 
+    text-align: center;
+    opacity: 0.99;
+    position: relative;
+}
+
+.header-image {
+    background-image: url('../Assets/Images/OIG.grGbI\ -\ Copy.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+}
+.logo{font-size: 28px; font-weight: bold;}
+nav ul{list-style:none; padding: 0; margin: 0; text-align:end;}
+nav li{display: inline; margin-right:20px;}
+nav a{text-decoration: none;font-size: 18px;}
+
