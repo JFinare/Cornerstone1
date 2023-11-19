@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/>
     <link rel="stylesheet" href="../CSS files/News.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,48 +12,58 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Dancing+Script&family=Kenia&family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <h1>The Stories of the Land</h1>
+    <header>
+        <div class="header-image"></div>
+        <div class="logo">The Stories of the Land</div>
+    </header>
+    
     <hr/>
     <h2>The Secomber Seconds</h2>
-    <form>
+    <form onsubmit="checkSecPswd(); return false;">
+        
         <label for="SecPswd">Monthly fee paid: </label>
         <input type="password" id="SecPswd">
-        <input type="button" value="Submit" onclick="checkSecPswd();" />
+        <input type="submit" value="Submit" />
+        <div id="alertMessage" style="color:red; display: none;" >You can pay for subcription in the Town Hall</div>
+
     </form>
 
     <script type="text/javascript">
         function checkSecPswd() {
             var confirmPassword = "gold";
             var password = document.getElementById("SecPswd").value;
-            if (password == confirmPassword) {
+            var alertMessage = document.getElementById("alertMessage");
+            if (password === confirmPassword) {
                  window.location="./Pages of Local Sources/Secomber Seconds.html";
             }
             else{
-                alert("Passwords do not match.");
+                alertMessage.style.display="block";
             }
         }
         </Script>
 
-    <h2>Whispers from the Moor</h2>
+    <h2>Whispers from the Moor - Coming Soon</h2>
     <a href="./Pages of Local Sources/Tales from the Moor.html">Open</a>
 
     <h2>Misty Channel</h2>
-    <form>
+    <form onsubmit="checkForestPswd(); return false">
         <label for="ForestPswd">Your informant is: </label>
         <input type="password" id="ForestPswd">
-        <input type="button" value="Submit" onclick="checkForestPswd();" />
+        <input type="submit" value="Submit" onclick="checkForestPswd();" />
+        <div id="alertForestMessage" style="color:darkgreen; display: none;" >Seek out an Envoy to join our channel</div>
+
     </form>
    
     <script type="text/javascript">
         function checkForestPswd() {
             var confirmPassword = "Pixie";
             var password = document.getElementById("ForestPswd").value;
-            if (password == confirmPassword) {
+            var alertForestMessage = document.getElementById("alertForestMessage");
+            if (password === confirmPassword) {
                  window.location="./Pages of Local Sources/Forest Channel.html";
             }
             else{
-                alert("Passwords do not match.");
+                alertForestMessage.style.display="block";            
             }
         }
         </Script>
